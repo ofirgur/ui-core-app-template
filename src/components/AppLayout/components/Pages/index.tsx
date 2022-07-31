@@ -1,7 +1,8 @@
 import React from 'react';
+import { PagesStyled } from './styled';
 
 const Pages = () => {
-  return <div>Pages</div>;
+  return <PagesStyled>Pages</PagesStyled>;
 };
 
 export default Pages;
