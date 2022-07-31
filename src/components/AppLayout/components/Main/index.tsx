@@ -1,7 +1,15 @@
 import React from 'react';
+import Header from '../Header';
+import Modules from '../Modules';
+import { MainStyled } from './styled';
 
 const Main = () => {
-  return <div>Main</div>;
+  return (
+    <MainStyled>
+      <Header />
+      <Modules />
+    </MainStyled>
+  );
 };
 
 export default Main;
