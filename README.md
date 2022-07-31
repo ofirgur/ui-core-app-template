@@ -22,6 +22,9 @@
 ### Cypress
 [Cypress](https://www.cypress.io/)
 
+### Linter
+[](https://eslint.org/)
+
 ### Prettier
 [Prettier](https://prettier.io/)
 
