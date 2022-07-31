@@ -22,6 +22,9 @@
 ### Cypress
 [Cypress](https://www.cypress.io/)
 
+### Prettier
+[Prettier](https://prettier.io/)
+
 ### Material-UI
 [Material-UI](https://v4.mui.com/getting-started/installation/)
 # Getting Started with Create React App
