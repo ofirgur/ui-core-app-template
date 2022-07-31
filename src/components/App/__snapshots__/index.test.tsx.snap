@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render correctly 1`] = `
+<div>
+  <div
+    class="sc-eCYdqJ bOVqNy"
+  >
+    <div
+      class="sc-bczRLJ hDKnho"
+    >
+      Left Panel
+    </div>
+    <main
+      class="sc-hKMtZM FQBQW"
+    >
+      <h2
+        class="sc-gsnTZi XESAr"
+      >
+        Header
+      </h2>
+      <div
+        class="sc-dkzDqf wMITy"
+      >
+        Pages
+      </div>
+    </main>
+  </div>
+</div>
+`;

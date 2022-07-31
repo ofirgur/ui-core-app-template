@@ -2,17 +2,17 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import LeftPanel from './components/LeftPanel';
 import Main from './components/Main';
-import { AppLayout } from '../AppLayout/styled';
+import { AppLayoutStyled } from '../AppLayout/styled';
 
-const Layout = () => {
+const AppLayout = () => {
   return (
     <BrowserRouter>
-      <AppLayout>
+      <AppLayoutStyled>
         <LeftPanel />
         <Main />
-      </AppLayout>
+      </AppLayoutStyled>
     </BrowserRouter>
   );
 };
 
-export default Layout;
+export default AppLayout;
