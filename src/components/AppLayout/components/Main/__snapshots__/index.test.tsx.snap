@@ -1,24 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LeftPanel should render correctly 1`] = `
-<div>
-  <main
-    class="sc-dkzDqf cFJZcl"
-  >
-    <h2
-      class="sc-bczRLJ fqvweB"
-    >
-      Header
-    </h2>
-    <div
-      class="sc-gsnTZi jpJQfJ"
-    >
-      Pages
-    </div>
-  </main>
-</div>
-`;
-
 exports[`Main should render correctly 1`] = `
 <div>
   <main

@@ -1,15 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Main should render correctly 1`] = `
-<div>
-  <div
-    class="sc-bczRLJ igExgT"
-  >
-    Pages
-  </div>
-</div>
-`;
-
 exports[`Pages should render correctly 1`] = `
 <div>
   <div

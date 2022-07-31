@@ -21,7 +21,9 @@ exports[`App should render correctly 1`] = `
       <div
         class="sc-dkzDqf wMITy"
       >
-        Pages
+        <div>
+          App
+        </div>
       </div>
     </main>
   </div>

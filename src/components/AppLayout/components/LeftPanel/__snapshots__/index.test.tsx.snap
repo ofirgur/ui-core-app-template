@@ -1,15 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header should render correctly 1`] = `
-<div>
-  <div
-    class="sc-bczRLJ hDKnho"
-  >
-    Left Panel
-  </div>
-</div>
-`;
-
 exports[`LeftPanel should render correctly 1`] = `
 <div>
   <div
