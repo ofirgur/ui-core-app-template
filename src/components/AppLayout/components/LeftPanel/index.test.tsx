@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
-import AppLayout from '.';
+import LeftPanel from '.';
 
-describe('AppLayout', () => {
+describe('LeftPanel', () => {
   it('should render correctly', () => {
-    const { container } = render(<AppLayout />);
+    const { container } = render(<LeftPanel />);
     expect(container).toMatchSnapshot();
   });
 });

@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
-import AppLayout from '.';
+import Header from '.';
 
-describe('AppLayout', () => {
+describe('Header', () => {
   it('should render correctly', () => {
-    const { container } = render(<AppLayout />);
+    const { container } = render(<Header />);
     expect(container).toMatchSnapshot();
   });
 });

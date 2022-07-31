@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppLayout should render correctly 1`] = `
+<div>
+  <h2
+    class="sc-bczRLJ fqvweB"
+  >
+    Header
+  </h2>
+</div>
+`;
+
+exports[`Header should render correctly 1`] = `
+<div>
+  <h2
+    class="sc-bczRLJ fqvweB"
+  >
+    Header
+  </h2>
+</div>
+`;

@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { render } from '@testing-library/react';
-import AppLayout from '.';
+import Pages from '.';
 
-describe('AppLayout', () => {
+describe('Pages', () => {
   it('should render correctly', () => {
-    const { container } = render(<AppLayout />);
+    const { container } = render(<Pages />);
     expect(container).toMatchSnapshot();
   });
 });
