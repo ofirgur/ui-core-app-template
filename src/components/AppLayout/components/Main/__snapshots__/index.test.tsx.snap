@@ -13,7 +13,7 @@ exports[`Main should render correctly 1`] = `
     <div
       class="sc-gsnTZi jpJQfJ"
     >
-      Pages
+      PagesStyled
     </div>
   </main>
 </div>
