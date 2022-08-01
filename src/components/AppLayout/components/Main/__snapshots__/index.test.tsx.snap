@@ -12,9 +12,7 @@ exports[`Main should render correctly 1`] = `
     </h2>
     <div
       class="sc-gsnTZi jpJQfJ"
-    >
-      PagesStyled
-    </div>
+    />
   </main>
 </div>
 `;

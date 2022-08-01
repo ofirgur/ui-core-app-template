@@ -20,9 +20,7 @@ exports[`AppLayout should render correctly 1`] = `
       </h2>
       <div
         class="sc-dkzDqf wMITy"
-      >
-        PagesStyled
-      </div>
+      />
     </main>
   </div>
 </div>

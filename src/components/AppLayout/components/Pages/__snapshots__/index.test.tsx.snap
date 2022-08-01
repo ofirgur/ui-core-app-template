@@ -4,8 +4,6 @@ exports[`Pages should render correctly 1`] = `
 <div>
   <div
     class="sc-bczRLJ igExgT"
-  >
-    PagesStyled
-  </div>
+  />
 </div>
 `;
