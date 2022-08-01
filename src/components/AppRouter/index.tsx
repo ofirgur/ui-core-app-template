@@ -1,20 +1,16 @@
-import * as React from 'react';
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Dashboard from 'pages/dashboard';
-import Garments from 'pages/garments';
-import Collections from 'pages/collections';
-import NotFoundPage from 'pages/notFoundPage';
-import App from '../App';
+import * as PAGES from './elements';
 
 const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<Dashboard />} />
-          <Route path="garments" element={<Garments />} />
-          <Route path="collections" element={<Collections />} />
-          <Route path="*" element={<NotFoundPage />} />
+        <Route path="/" element={PAGES.getAppElement()}>
+          <Route index element={PAGES.getDashboardElement()} />
+          <Route path="garments" element={PAGES.getGarmentsElement()} />
+          <Route path="collections" element={PAGES.getCollectionsElement()} />
+          <Route path="*" element={PAGES.getNotFoundElement()} />
         </Route>
       </Routes>
     </BrowserRouter>
