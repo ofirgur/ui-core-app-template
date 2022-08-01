@@ -5,7 +5,9 @@ exports[`Pages should render correctly 1`] = `
   <div
     class="sc-bczRLJ igExgT"
   >
-    Pages
+    <div>
+      Homeeeeeeeeeeeeeeeeeeeeeeeee
+    </div>
   </div>
 </div>
 `;
