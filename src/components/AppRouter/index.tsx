@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import routes from './routes';
 import * as PAGES from './elements';
 
-const { dashboard, garments, collection, notFound } = routes;
+const { dashboard, garments, collections, notFound } = routes;
 
 const AppRouter = () => {
   return (
@@ -16,7 +16,7 @@ const AppRouter = () => {
             element={PAGES.getGarmentsElement()}
           />
           <Route
-            path={collection.pathname}
+            path={collections.pathname}
             element={PAGES.getCollectionsElement()}
           />
           <Route

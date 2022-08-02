@@ -7,9 +7,9 @@ export default {
     pathname: 'garments',
     title: 'Garments',
   },
-  collection: {
-    pathname: 'collection',
-    title: 'Collection',
+  collections: {
+    pathname: 'collections',
+    title: 'Collections',
   },
   notFound: {
     pathname: '*',
