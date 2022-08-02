@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import routes from './routes';
-import * as PAGES from './elements';
+import routes from '../../routes';
+import * as PAGES from '../../elements';
 
 const { dashboard, garments, collections, notFound } = routes;
 
