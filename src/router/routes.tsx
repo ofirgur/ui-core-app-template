@@ -7,6 +7,10 @@ export default {
     pathname: '/garments',
     title: 'Garments',
   },
+  add: {
+    pathname: '/garments/add',
+    title: 'Garments',
+  },
   collections: {
     pathname: '/collections',
     title: 'Collections',

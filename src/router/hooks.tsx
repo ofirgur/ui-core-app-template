@@ -3,7 +3,9 @@ import routes from './routes';
 
 export const useCurrentRoute = () => {
   const location = useLocation();
-  return Object.values(routes).find(
-    (route) => route.pathname === location.pathname
+  return (
+    Object.values(routes).find(
+      (route) => route.pathname === location.pathname
+    ) || routes.notFound
   );
 };
