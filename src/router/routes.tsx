@@ -4,11 +4,11 @@ export default {
     title: 'Dashboard',
   },
   garments: {
-    pathname: 'garments',
+    pathname: '/garments',
     title: 'Garments',
   },
   collections: {
-    pathname: 'collections',
+    pathname: '/collections',
     title: 'Collections',
   },
   notFound: {
