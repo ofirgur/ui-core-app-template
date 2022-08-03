@@ -1,10 +1,10 @@
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 
-const IS_MOCKED = false;
+const IS_MOCKED_BUILD_PARAM = false;
 
 export const createAPIAction = () => {
-  if(IS_MOCKED) {
+  if(IS_MOCKED_BUILD_PARAM) {
     // This sets the mock adapter on the default instance
     const mock = new MockAdapter(axios, { delayResponse: 2000 });
 
