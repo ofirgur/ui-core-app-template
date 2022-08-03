@@ -1,35 +1,54 @@
 # Browzwear Frontend Team (R & D)
-# Getting Started with ui-core-app-template 
+
+# Getting Started with ui-core-app-template
 
 ## Tech Spec
 
-### React 
+### React
+
 [React](https://reactjs.org/)
 
 ### React Router
+
 [React Router V6](https://reactrouter.com/docs/en/v6/getting-started/overview)
 
 ### Create React App & Typescript
+
 [Create React App](https://create-react-app.dev/docs/adding-typescript/).
 
 ### Jest & React Testing Library
+
 [Jest](https://jestjs.io/docs/getting-started)
 [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 
 ### Styled Components
+
 [Styled Components](https://styled-components.com/)
 
 ### Cypress
+
 [Cypress](https://www.cypress.io/)
 
 ### Linter
+
 [](https://eslint.org/)
 
 ### Prettier
+
 [Prettier](https://prettier.io/)
 
 ### Material-UI
+
 [Material-UI](https://v4.mui.com/getting-started/installation/)
+
+### Axios
+
+[Axios](https://www.npmjs.com/package/axios#example)
+
+### Axios Mock Adapter
+
+[Axios-Mock-Adapter](https://www.npmjs.com/package/axios-mock-adapter)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
