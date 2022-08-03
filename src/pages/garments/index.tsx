@@ -3,7 +3,11 @@ import { createAPIAction } from 'utils/api';
 
 const Garments = () => {
   useEffect(() => {
-    createAPIAction();
+    createAPIAction({
+      url: 'users',
+    }).then((response) => {
+      console.log(response);
+    });
   }, []);
 
   return <div>Garments</div>;
