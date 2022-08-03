@@ -49,6 +49,10 @@
 
 [Axios-Mock-Adapter](https://www.npmjs.com/package/axios-mock-adapter)
 
+### Environment Variables (NODE_ENV)
+
+[Adding Custom Environment Variables](https://create-react-app.dev/docs/adding-custom-environment-variables)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,6 +1,6 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import MockAdapter from 'axios-mock-adapter';
-import { DEFAULT_BASE_URL, DEFAULT_MOCK_CONFIG, IS_MOCKED } from './constants';
+import { DEFAULT_BASE_URL, DEFAULT_MOCK_CONFIG, USE_MOCK } from './constants';
 import { MockConfig } from './types';
 
 export const createAPIAction = (requestConfig: AxiosRequestConfig, mockConfig?: MockConfig) => {
@@ -8,7 +8,7 @@ export const createAPIAction = (requestConfig: AxiosRequestConfig, mockConfig?: 
   // axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
   // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
-  if(IS_MOCKED) {
+  if(USE_MOCK) {
     const { mockDelay, mockResponse } = mockConfig || DEFAULT_MOCK_CONFIG;
     // This sets the mock adapter on the default instance
     const mock = new MockAdapter(axios, { delayResponse: mockDelay });
