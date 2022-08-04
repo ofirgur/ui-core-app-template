@@ -53,6 +53,10 @@
 
 [Adding Custom Environment Variables](https://create-react-app.dev/docs/adding-custom-environment-variables)
 
+### CSS custom properties (variables)
+
+[CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
