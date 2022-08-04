@@ -1,13 +1,28 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import MockAdapter from 'axios-mock-adapter';
-import { DEFAULT_BASE_URL, DEFAULT_MOCK_CONFIG, USE_MOCK } from './constants';
 import { MockConfig } from './types';
 
-export const createAPIAction = (requestConfig: AxiosRequestConfig, mockConfig?: MockConfig) => {
-  axios.defaults.baseURL = DEFAULT_BASE_URL;
-  // axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
-  // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+/* 
+There is also a built-in environment variable called NODE_ENV. 
+You can read it from process.env.NODE_ENV. When you run npm start, 
+it is always equal to 'development', when you run npm test it is always equal to 'test', 
+and when you run npm run build to make a production bundle, it is always equal to 'production'. 
+You cannot override NODE_ENV manually. 
+This prevents developers from accidentally deploying a slow development build to production.
+*/
+export const USE_MOCK = process.env.NODE_ENV !== 'production';
+export const DEFAULT_BASE_URL = 'https://jsonplaceholder.typicode.com';
+export const DEFAULT_MOCK_CONFIG = {
+  mockDelay: 2000,
+  mockResponse: {
+    status: 200,
+    data: 'createAPIAction function: default mockConfig',
+  },
+};
 
+axios.defaults.baseURL = DEFAULT_BASE_URL;
+
+export const createAPIAction = (requestConfig: AxiosRequestConfig, mockConfig?: MockConfig) => {
   if(USE_MOCK) {
     const { mockDelay, mockResponse } = mockConfig || DEFAULT_MOCK_CONFIG;
     // This sets the mock adapter on the default instance
@@ -19,12 +34,12 @@ export const createAPIAction = (requestConfig: AxiosRequestConfig, mockConfig?: 
   return axios(requestConfig);
 };
 
-// Important: If axios is used with multiple domains, the AUTH_TOKEN will be sent to all of them.
-// See below for an example using Custom instance defaults instead.
-// axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
-// axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-
 /*
+Important: If axios is used with multiple domains, the AUTH_TOKEN will be sent to all of them.
+See below for an example using Custom instance defaults instead.
+axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+
 export type AxiosRequestHeaders = Record<string, string | number | boolean>;
 
 export type AxiosResponseHeaders = Record<string, string> & {

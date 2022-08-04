@@ -1,9 +1,9 @@
 export type MockConfig = {
-    mockDelay: number,
-    mockResponse: MockResponse,
+  mockDelay: number,
+  mockResponse: MockResponse,
 };
-
-export type MockResponse = {
+  
+  export type MockResponse<T = any> = {
     status: number;
-    data: any;
-};
+    data: T;
+  };

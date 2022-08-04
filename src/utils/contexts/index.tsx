@@ -1,5 +1,5 @@
 import React from 'react';
-import { GameStateContextInterface, GameState } from '../types';
+import { GameStateContextInterface, GameState } from './types';
 
 // state management context
 const GameStateContext = React.createContext<GameStateContextInterface | null>(
@@ -22,7 +22,13 @@ export const useGameStateContext = () => {
 // context frovider for app state, should wrap the Root of the app
 // it's a component with local state,
 // it shares it's state (getter & setter) with the returned GameStateContext.Provider (context provider)
-export const GameStateContextProvider = (props: any) => {
+type GameStateContextProviderProps = {
+  initialState: GameState;
+};
+
+export const GameStateContextProvider = (
+  props: GameStateContextProviderProps
+) => {
   const { initialState } = props;
   const [gameState, regularSetGameState] = React.useState(initialState);
   const setGameState = (newState: Partial<GameState>) => {
