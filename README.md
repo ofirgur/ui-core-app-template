@@ -31,7 +31,7 @@
 
 ### Linter
 
-[](https://eslint.org/)
+[ESLinter](https://eslint.org/)
 
 ### Prettier
 
