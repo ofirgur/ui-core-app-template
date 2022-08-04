@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import variables from 'utils/variables';
 
 export const LeftPanelStyled = styled.ul`
-  width: ${variables.layout.leftPanel.width}px;
+  width: 200px;
   margin-top: 70px;
 `;
 
