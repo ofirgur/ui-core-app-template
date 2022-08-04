@@ -41,6 +41,14 @@
 
 [Material-UI](https://v4.mui.com/getting-started/installation/)
 
+### Material-UI Customization
+
+[ThemeProvider](https://mui.com/material-ui/customization/theming/)
+
+### CSS custom properties (variables)
+
+[CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+
 ### Axios
 
 [Axios](https://www.npmjs.com/package/axios#example)
@@ -52,10 +60,6 @@
 ### Environment Variables (NODE_ENV)
 
 [Adding Custom Environment Variables](https://create-react-app.dev/docs/adding-custom-environment-variables)
-
-### CSS custom properties (variables)
-
-[CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 
 # Getting Started with Create React App
 
