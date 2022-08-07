@@ -12,6 +12,10 @@
 
 [React Router V6](https://reactrouter.com/docs/en/v6/getting-started/overview)
 
+### Code Spliting
+
+[Code-Splitting](https://reactjs.org/docs/code-splitting.html)
+
 ### Create React App & Typescript
 
 [Create React App](https://create-react-app.dev/docs/adding-typescript/).
