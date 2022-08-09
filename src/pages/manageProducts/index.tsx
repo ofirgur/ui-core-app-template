@@ -1,7 +1,3 @@
-import React from 'react';
+import ManageProductsOutlet from './components/ManageProductsOutlet';
 
-const ManageProducts = () => {
-  return <div>ManageProducts</div>;
-};
-
-export default ManageProducts;
+export default ManageProductsOutlet;

@@ -19,4 +19,9 @@ export interface GameStateContextInterface {
     game = 2,
     end = 3,
   }
+
+  export const INITIAL_GAME_STATE: GameState = {
+    gameLevel: GameLevel.Beginner,
+    gameScreen: GameScreen.game,
+  };
   
