@@ -1,19 +1,23 @@
 export default {
-  dashboard: {
+  manageproducts: {
     pathname: '/',
-    title: 'Dashboard',
+    title: 'Manage Products',
   },
-  garments: {
-    pathname: '/garments',
-    title: 'Garments',
+  createajob: {
+    pathname: '/createajob',
+    title: 'Create a Job',
   },
-  add: {
-    pathname: '/garments/add',
-    title: 'Garments',
+  manageavatars: {
+    pathname: '/manageavatars',
+    title: 'Manage Avatars',
   },
-  collections: {
-    pathname: '/collections',
-    title: 'Collections',
+  managegarments: {
+    pathname: '/managegarments',
+    title: 'Manage Garments',
+  },
+  status: {
+    pathname: '/status',
+    title: 'Status',
   },
   notFound: {
     pathname: '*',

@@ -1,27 +1,42 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import routes from '../../routes';
-import * as PAGES from '../../elements';
+import * as ELEMENTS from '../../elements';
 
-const { dashboard, garments, collections, notFound } = routes;
+const {
+  manageproducts,
+  createajob,
+  manageavatars,
+  managegarments,
+  status,
+  notFound,
+} = routes;
 
 const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={dashboard.pathname} element={PAGES.getAppElement()}>
-          <Route index element={PAGES.getDashboardElement()} />
+        <Route
+          path={manageproducts.pathname}
+          element={ELEMENTS.getAppElement()}
+        >
+          <Route index element={ELEMENTS.getManageProductsElement()} />
           <Route
-            path={garments.pathname}
-            element={PAGES.getGarmentsElement()}
+            path={createajob.pathname}
+            element={ELEMENTS.getCreateAJobElement()}
           />
           <Route
-            path={collections.pathname}
-            element={PAGES.getCollectionsElement()}
+            path={manageavatars.pathname}
+            element={ELEMENTS.getManageAvatarsElement()}
           />
+          <Route
+            path={managegarments.pathname}
+            element={ELEMENTS.getManageGarmentsElement()}
+          />
+          <Route path={status.pathname} element={ELEMENTS.getStatusElement()} />
           <Route
             path={notFound.pathname}
-            element={PAGES.getNotFoundElement()}
+            element={ELEMENTS.getNotFoundElement()}
           />
         </Route>
       </Routes>

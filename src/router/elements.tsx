@@ -12,34 +12,67 @@ export const getAppElement = () => {
   );
 };
 
-export const getDashboardElement = () => {
-  const Component = React.lazy(
-    () => import(/* webpackChunkName: "dashboard-element" */ 'pages/dashboard')
-  );
-
-  return (
-    <Suspense fallback={<>...</>}>
-      <Component />
-    </Suspense>
-  );
-};
-
-export const getGarmentsElement = () => {
-  const Component = React.lazy(
-    () => import(/* webpackChunkName: "garments-element" */ 'pages/garments')
-  );
-
-  return (
-    <Suspense fallback={<>...</>}>
-      <Component />
-    </Suspense>
-  );
-};
-
-export const getCollectionsElement = () => {
+export const getManageProductsElement = () => {
   const Component = React.lazy(
     () =>
-      import(/* webpackChunkName: "collections-element" */ 'pages/collections')
+      import(
+        /* webpackChunkName: "manage-product-element" */ 'pages/manageProducts'
+      )
+  );
+
+  return (
+    <Suspense fallback={<>...</>}>
+      <Component />
+    </Suspense>
+  );
+};
+
+export const getCreateAJobElement = () => {
+  const Component = React.lazy(
+    () =>
+      import(/* webpackChunkName: "create-a-job-element" */ 'pages/createAJob')
+  );
+
+  return (
+    <Suspense fallback={<>...</>}>
+      <Component />
+    </Suspense>
+  );
+};
+
+export const getManageAvatarsElement = () => {
+  const Component = React.lazy(
+    () =>
+      import(
+        /* webpackChunkName: "manage-avatars-element" */ 'pages/manageAvatars'
+      )
+  );
+
+  return (
+    <Suspense fallback={<>...</>}>
+      <Component />
+    </Suspense>
+  );
+};
+
+export const getManageGarmentsElement = () => {
+  const Component = React.lazy(
+    () =>
+      import(
+        /* webpackChunkName: "manage-garments-element" */ 'pages/manageGarments'
+      )
+  );
+
+  return (
+    <Suspense fallback={<>...</>}>
+      <Component />
+    </Suspense>
+  );
+};
+
+export const getStatusElement = () => {
+  const Component = React.lazy(
+    () => import(/* webpackChunkName: "status-element" */ 'pages/status')
   );
 
   return (

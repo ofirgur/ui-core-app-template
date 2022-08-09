@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { createAPIAction } from 'utils/api';
 
-const Garments = () => {
+const CreateAJob = () => {
   useEffect(() => {
     createAPIAction({
       url: 'users',
@@ -10,7 +10,7 @@ const Garments = () => {
     });
   }, []);
 
-  return <div>Garments</div>;
+  return <div>CreateAJob</div>;
 };
 
-export default Garments;
+export default CreateAJob;
