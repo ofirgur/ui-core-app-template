@@ -23,7 +23,12 @@ const ManageProductsIndex = () => {
 
   if (!ready) return <div>Fetching...</div>;
 
-  return <div>{products}</div>;
+  return (
+    <div>
+      {products}
+      <div></div>
+    </div>
+  );
 };
 
 export default ManageProductsIndex;
