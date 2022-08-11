@@ -1,10 +1,11 @@
 import React, { Suspense } from 'react';
 
-export const getAppElement = () => {
-  const Component = React.lazy(
-    () => import(/* webpackChunkName: "app-element" */ 'components/App')
-  );
-
+export const getSuspendedComponent = (
+  factoty: () => Promise<{
+    default: React.ComponentType<any>;
+  }>
+) => {
+  const Component = React.lazy(factoty);
   return (
     <Suspense fallback={<>...</>}>
       <Component />
@@ -12,84 +13,54 @@ export const getAppElement = () => {
   );
 };
 
+export const getAppElement = () => {
+  return getSuspendedComponent(
+    () => import(/* webpackChunkName: "app-element" */ 'components/App')
+  );
+};
+
 export const getManageProductsElement = () => {
-  const Component = React.lazy(
+  return getSuspendedComponent(
     () =>
       import(
         /* webpackChunkName: "manage-product-element" */ 'pages/manageProducts'
       )
   );
-
-  return (
-    <Suspense fallback={<>...</>}>
-      <Component />
-    </Suspense>
-  );
 };
 
 export const getCreateAJobElement = () => {
-  const Component = React.lazy(
+  return getSuspendedComponent(
     () =>
       import(/* webpackChunkName: "create-a-job-element" */ 'pages/createAJob')
-  );
-
-  return (
-    <Suspense fallback={<>...</>}>
-      <Component />
-    </Suspense>
   );
 };
 
 export const getManageAvatarsElement = () => {
-  const Component = React.lazy(
+  return getSuspendedComponent(
     () =>
       import(
         /* webpackChunkName: "manage-avatars-element" */ 'pages/manageAvatars'
       )
   );
-
-  return (
-    <Suspense fallback={<>...</>}>
-      <Component />
-    </Suspense>
-  );
 };
 
 export const getManageGarmentsElement = () => {
-  const Component = React.lazy(
+  return getSuspendedComponent(
     () =>
       import(
         /* webpackChunkName: "manage-garments-element" */ 'pages/manageGarments'
       )
   );
-
-  return (
-    <Suspense fallback={<>...</>}>
-      <Component />
-    </Suspense>
-  );
 };
 
 export const getStatusElement = () => {
-  const Component = React.lazy(
+  return getSuspendedComponent(
     () => import(/* webpackChunkName: "status-element" */ 'pages/status')
-  );
-
-  return (
-    <Suspense fallback={<>...</>}>
-      <Component />
-    </Suspense>
   );
 };
 
 export const getNotFoundElement = () => {
-  const Component = React.lazy(
+  return getSuspendedComponent(
     () => import(/* webpackChunkName: "not-found-element" */ 'pages/notFound')
-  );
-
-  return (
-    <Suspense fallback={<>...</>}>
-      <Component />
-    </Suspense>
   );
 };

@@ -14,28 +14,33 @@ const {
 } = routes;
 
 const AppRouter = () => {
+  const getPathname = (path: string) => `${path}/*`;
+
   return (
     <BrowserRouter>
       <Routes>
         <Route path={home.pathname} element={ELEMENTS.getAppElement()}>
           <Route index element={<div>Home</div>} />
           <Route
-            path={manageproducts.pathname}
+            path={getPathname(manageproducts.pathname)}
             element={ELEMENTS.getManageProductsElement()}
           />
           <Route
-            path={createajob.pathname}
+            path={getPathname(createajob.pathname)}
             element={ELEMENTS.getCreateAJobElement()}
           />
           <Route
-            path={manageavatars.pathname}
+            path={getPathname(manageavatars.pathname)}
             element={ELEMENTS.getManageAvatarsElement()}
           />
           <Route
-            path={managegarments.pathname}
+            path={getPathname(managegarments.pathname)}
             element={ELEMENTS.getManageGarmentsElement()}
           />
-          <Route path={status.pathname} element={ELEMENTS.getStatusElement()} />
+          <Route
+            path={getPathname(status.pathname)}
+            element={ELEMENTS.getStatusElement()}
+          />
           <Route
             path={notFound.pathname}
             element={ELEMENTS.getNotFoundElement()}
