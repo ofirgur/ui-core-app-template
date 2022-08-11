@@ -3,7 +3,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import routes from '../../routes';
 import * as ELEMENTS from '../../elements';
 
+import { gerManageProductsRoutes } from '../../../pages/manageProducts';
+
 const {
+  home,
   manageproducts,
   createajob,
   manageavatars,
@@ -16,11 +19,9 @@ const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path={manageproducts.pathname}
-          element={ELEMENTS.getAppElement()}
-        >
-          <Route index element={ELEMENTS.getManageProductsElement()} />
+        <Route path={home.pathname} element={ELEMENTS.getAppElement()}>
+          <Route index element={<div>Home</div>} />
+          {gerManageProductsRoutes(manageproducts.pathname)}
           <Route
             path={createajob.pathname}
             element={ELEMENTS.getCreateAJobElement()}

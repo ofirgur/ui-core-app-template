@@ -12,20 +12,20 @@ export const getAppElement = () => {
   );
 };
 
-export const getManageProductsElement = () => {
-  const Component = React.lazy(
-    () =>
-      import(
-        /* webpackChunkName: "manage-product-element" */ 'pages/manageProducts'
-      )
-  );
+// export const getManageProductsElement = () => {
+//   const Component = React.lazy(
+//     () =>
+//       import(
+//         /* webpackChunkName: "manage-product-element" */ 'pages/manageProducts'
+//       )
+//   );
 
-  return (
-    <Suspense fallback={<>...</>}>
-      <Component />
-    </Suspense>
-  );
-};
+//   return (
+//     <Suspense fallback={<>...</>}>
+//       <Component />
+//     </Suspense>
+//   );
+// };
 
 export const getCreateAJobElement = () => {
   const Component = React.lazy(
