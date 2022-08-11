@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 
 export const getSuspendedComponent = (
   factoty: () => Promise<{
-    default: React.ComponentType<any>;
+    default: React.ComponentType<unknown>;
   }>
 ) => {
   const Component = React.lazy(factoty);
