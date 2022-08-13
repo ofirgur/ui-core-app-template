@@ -10,7 +10,7 @@ const {
   manageavatars,
   managegarments,
   status,
-  notFound,
+  notfound,
 } = routes;
 
 const AppRouter = () => {
@@ -19,32 +19,29 @@ const AppRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={home.pathname} element={ELEMENTS.getAppElement()}>
+        <Route path={home.path} element={ELEMENTS.getAppElement()}>
           <Route index element={<div>Home</div>} />
           <Route
-            path={getPathname(manageproducts.pathname)}
+            path={getPathname(manageproducts.path)}
             element={ELEMENTS.getManageProductsElement()}
           />
           <Route
-            path={getPathname(createajob.pathname)}
+            path={getPathname(createajob.path)}
             element={ELEMENTS.getCreateAJobElement()}
           />
           <Route
-            path={getPathname(manageavatars.pathname)}
+            path={getPathname(manageavatars.path)}
             element={ELEMENTS.getManageAvatarsElement()}
           />
           <Route
-            path={getPathname(managegarments.pathname)}
+            path={getPathname(managegarments.path)}
             element={ELEMENTS.getManageGarmentsElement()}
           />
           <Route
-            path={getPathname(status.pathname)}
+            path={getPathname(status.path)}
             element={ELEMENTS.getStatusElement()}
           />
-          <Route
-            path={notFound.pathname}
-            element={ELEMENTS.getNotFoundElement()}
-          />
+          <Route path={notfound.path} element={ELEMENTS.getNotFoundElement()} />
         </Route>
       </Routes>
     </BrowserRouter>

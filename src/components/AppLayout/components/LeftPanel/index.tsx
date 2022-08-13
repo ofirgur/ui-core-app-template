@@ -11,6 +11,11 @@ const LeftPanel = () => {
     navigate(pathname);
   };
 
+  const isActiveRoute = (pathname: string) => {
+    if (!currentRoute) return false;
+    return currentRoute.pathname.includes(pathname);
+  };
+
   return (
     <LeftPanelStyled>
       {LIST_ITEMS.map((listItem) => {
@@ -18,7 +23,7 @@ const LeftPanel = () => {
           <ListItemStyled
             key={listItem.pathname}
             onClick={handleNavigate(listItem.pathname)}
-            active={listItem.pathname === currentRoute.pathname}
+            active={isActiveRoute(listItem.pathname)}
           >
             {listItem.title}
           </ListItemStyled>
