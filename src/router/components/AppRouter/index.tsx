@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import routes from '../../routes';
 import * as ELEMENTS from '../../elements';
 
@@ -20,7 +20,10 @@ const AppRouter = () => {
     <BrowserRouter>
       <Routes>
         <Route path={home.path} element={ELEMENTS.getAppElement()}>
-          <Route index element={<div>Home</div>} />
+          <Route
+            index
+            element={<Navigate to={manageproducts.path} replace />}
+          />
           <Route
             path={getPathname(manageproducts.path)}
             element={ELEMENTS.getManageProductsElement()}
