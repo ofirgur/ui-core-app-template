@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
+import { blue } from '@mui/material/colors';
 
 export const AppLayoutStyled = styled.div`
   min-height: 100vh;
   display: flex;
 
-  background: #000;
+  background: ${blue[500]};
   color: #fff;
 `;

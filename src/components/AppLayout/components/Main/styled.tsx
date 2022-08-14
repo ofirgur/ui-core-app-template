@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
+import { grey } from '@mui/material/colors';
 
 export const MainStyled = styled.main`
   flex: 1 0 auto;
-  background: #2d400b;
+  background: ${grey[100]};
 `;

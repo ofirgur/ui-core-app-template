@@ -2,20 +2,20 @@ import { createTheme } from '@mui/material/styles';
 
 declare module '@mui/material/styles/createTheme' {
   interface Theme {
-    status: {
-      danger: string;
-    };
+    background: {
+      app: string;
+    },
   }
   // allow configuration using `createTheme`
   interface ThemeOptions {
-    status?: {
-      danger?: string;
-    };
+    background?: {
+      app: string;
+    },
   }
 }
 
 export default createTheme({
-  status: {
-    danger: 'orange',
+  background: {
+    app: '#2196f3',
   },
 });
