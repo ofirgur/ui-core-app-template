@@ -4,7 +4,6 @@ import theme from 'utils/theme';
 import AppLayout from '../AppLayout';
 
 const App = () => {
-  console.log('theme: ', theme);
   return (
     <ThemeProvider theme={theme}>
       <AppLayout />
