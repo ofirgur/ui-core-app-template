@@ -41,13 +41,13 @@
 
 [Prettier](https://prettier.io/)
 
-### Material-UI
+### MUI
 
-[Material-UI](https://v4.mui.com/getting-started/installation/)
+[MUI](https://mui.com/)
 
-### Material-UI Customization
+### MUI Customization
 
-[ThemeProvider](https://mui.com/material-ui/customization/theming/)
+[ThemeProvider](https://mui.com/material-ui/customization/theming/#createtheme-options-args-theme)
 
 ### CSS custom properties (variables)
 

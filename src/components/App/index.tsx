@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from '@mui/material/styles';
 import theme from 'utils/theme';
 import AppLayout from '../AppLayout';
 

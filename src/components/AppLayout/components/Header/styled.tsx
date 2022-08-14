@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 export const HeaderStyled = styled.h2`
   height: 70px;
