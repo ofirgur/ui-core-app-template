@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { blue } from '@mui/material/colors';
 
 export const LeftPanelStyled = styled.ul`
   width: 200px;
@@ -16,8 +17,8 @@ export const ListItemStyled = styled.li<ListItemStyledType>`
   cursor: pointer;
   padding: 10px;
   font-size: 20px;
-  background-color: ${(p) => (p.active ? '#262626' : '')};
+  background-color: ${(p) => (p.active ? blue[300] : '')};
   &:hover {
-    background-color: #262626;
+    background-color: ${blue[300]};
   }
 `;
