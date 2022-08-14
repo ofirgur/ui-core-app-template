@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getProductsAPI } from 'pages/manageProducts/api';
 import { useManageProductsContext } from 'pages/manageProducts/state/context';
+import ManageProductsSkeleton from '../ManageProductsSkeleton';
 
 const ManageProductsIndex = () => {
   const [ready, setReady] = useState(false);
@@ -21,7 +22,7 @@ const ManageProductsIndex = () => {
     setProducts();
   }, []);
 
-  if (!ready) return <div>Fetching...</div>;
+  if (!ready) return <ManageProductsSkeleton />;
 
   return (
     <div>
