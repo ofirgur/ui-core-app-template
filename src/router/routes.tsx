@@ -9,11 +9,6 @@ const routes = {
     pathname: '/manageproducts',
     title: 'Manage Products',
   },
-  productdetails: {
-    path: 'productdetails',
-    pathname: '/manageproducts/productdetails',
-    title: 'Product Details',
-  },
   createajob: {
     path: 'createajob',
     pathname: '/createajob',
@@ -44,5 +39,8 @@ const routes = {
 export default routes;
 
 export const findRoute = (pathname: string) => {
-  return Object.values(routes).find((r) => r.pathname === pathname);
+  if (pathname === routes.home.pathname) return routes.home;
+  return Object.values(routes)
+    .filter((r) => r.pathname !== routes.home.pathname)
+    .find((r) => pathname.includes(r.pathname));
 };

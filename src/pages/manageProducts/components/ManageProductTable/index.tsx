@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableContainer from '@mui/material/TableContainer';
@@ -15,6 +16,11 @@ type ManageProductTableProps = {
 
 const ManageProductTable = (props: ManageProductTableProps) => {
   const { products } = props;
+  const navigate = useNavigate();
+
+  const handleRowClick = (productId: string) => {
+    navigate(productId);
+  };
 
   return (
     <TableContainer component={Paper}>
@@ -31,7 +37,7 @@ const ManageProductTable = (props: ManageProductTableProps) => {
         </TableHead>
         <TableBody>
           {products.map((row) => (
-            <StyledTableRow key={row.id}>
+            <StyledTableRow key={row.id} onClick={() => handleRowClick(row.id)}>
               <StyledTableCell>{row.name}</StyledTableCell>
               <StyledTableCell>{row.sizes}</StyledTableCell>
               <StyledTableCell>{row.lastRun}</StyledTableCell>
