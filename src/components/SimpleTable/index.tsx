@@ -7,12 +7,12 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { StyledTableCell, StyledTableRow } from './styled';
 
-type SimpleTableProps<T = any> = {
+type SimpleTableProps = {
   columns: string[];
-  rows: T[];
+  rows: object[];
 };
 
-export const index = (props: SimpleTableProps) => {
+export const SimpleTable = (props: SimpleTableProps) => {
   const { columns, rows } = props;
 
   return (
@@ -26,10 +26,10 @@ export const index = (props: SimpleTableProps) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((r, i) => (
+          {rows.map((row: object, i) => (
             <StyledTableRow key={i}>
-              {Object.values(r).map((f: any, i) => (
-                <StyledTableCell key={i}>{f}</StyledTableCell>
+              {Object.values(row).map((field: JSX.Element, i) => (
+                <StyledTableCell key={i}>{field}</StyledTableCell>
               ))}
             </StyledTableRow>
           ))}
@@ -38,3 +38,5 @@ export const index = (props: SimpleTableProps) => {
     </TableContainer>
   );
 };
+
+export default SimpleTable;

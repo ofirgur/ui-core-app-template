@@ -10,7 +10,7 @@ export const getProductsMockConfig = {
         lastRun: '6 min ago',
         lastSync: '1 second ago',
         sku: 'Shirt1',
-        description: '',
+        description: 'bla bla',
       },
       {
         id: 'rpoimnuytgdf',
@@ -28,7 +28,7 @@ export const getProductsMockConfig = {
         lastRun: '18/06/22',
         lastSync: 'Never',
         sku: '',
-        description: '',
+        description: 'gla gla',
       },
       {
         id: 'dfrghgtrewsd',
