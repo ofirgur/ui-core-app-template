@@ -1,8 +1,8 @@
-import * as React from 'react';
+import React from 'react';
 import Box from '@mui/material/Box';
 import Skeleton from '@mui/material/Skeleton';
 
-const ManageProductsSkeleton = () => {
+const TableSkeleton = () => {
   return (
     <Box>
       <Skeleton animation="wave" height={70} />
@@ -13,4 +13,4 @@ const ManageProductsSkeleton = () => {
   );
 };
 
-export default ManageProductsSkeleton;
+export default TableSkeleton;
