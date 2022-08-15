@@ -23,7 +23,7 @@ const ManageProductsIndex = () => {
     setProducts();
   }, []);
 
-  if (ready) return <Skeleton type="cards" />;
+  if (!ready) return <Skeleton type="table" />;
 
   return <ManageProductTable products={products} />;
 };
