@@ -17,7 +17,6 @@ type ManageProductTableProps = {
 const ManageProductTable = (props: ManageProductTableProps) => {
   const { products } = props;
   const navigate = useNavigate();
-
   const handleRowClick = (productId: string) => {
     navigate(productId);
   };
