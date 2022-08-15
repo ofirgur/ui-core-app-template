@@ -7,4 +7,5 @@ export const HeaderStyled = styled.h2`
   justify-content: center;
   align-items: center;
   background: ${blue[500]};
+  font-size: 25px;
 `;
