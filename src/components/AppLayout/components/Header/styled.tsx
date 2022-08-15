@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { blue } from '@mui/material/colors';
 
 export const HeaderStyled = styled.h2`
-  height: 70px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;

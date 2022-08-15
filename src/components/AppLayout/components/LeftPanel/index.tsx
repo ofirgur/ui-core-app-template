@@ -1,8 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import STRINGS from '../../../../utils/strings';
 import { useCurrentRoute } from 'router/hooks';
 import { LIST_ITEMS } from './items';
-import { LeftPanelStyled, ListItemStyled } from './styled';
+import {
+  StyledLeftPanel,
+  StyledLogo,
+  StyledList,
+  StyledListItem,
+} from './styled';
 
 const LeftPanel = () => {
   const currentRoute = useCurrentRoute();
@@ -17,19 +23,22 @@ const LeftPanel = () => {
   };
 
   return (
-    <LeftPanelStyled>
-      {LIST_ITEMS.map((listItem) => {
-        return (
-          <ListItemStyled
-            key={listItem.pathname}
-            onClick={handleNavigate(listItem.pathname)}
-            active={isActiveRoute(listItem.pathname)}
-          >
-            {listItem.title}
-          </ListItemStyled>
-        );
-      })}
-    </LeftPanelStyled>
+    <StyledLeftPanel>
+      <StyledLogo>{STRINGS.Logo}</StyledLogo>
+      <StyledList>
+        {LIST_ITEMS.map((listItem) => {
+          return (
+            <StyledListItem
+              key={listItem.pathname}
+              onClick={handleNavigate(listItem.pathname)}
+              active={isActiveRoute(listItem.pathname)}
+            >
+              {listItem.title}
+            </StyledListItem>
+          );
+        })}
+      </StyledList>
+    </StyledLeftPanel>
   );
 };
 
