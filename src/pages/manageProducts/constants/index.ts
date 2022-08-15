@@ -14,4 +14,5 @@ export const manageProductsColumns = [
   STRINGS.LastSync,
   STRINGS.SKU,
   STRINGS.Description,
+  STRINGS.Actions,
 ];

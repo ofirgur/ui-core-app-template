@@ -5,4 +5,9 @@ export default {
     LastSync: 'Last sync',
     SKU: 'SKU',
     Description: 'Description',
+    Actions: 'Actions',
+    Info: 'Info',
+    QA: 'QA',
+    Sync: 'Sync',
+    Archive: 'Archive',
 };

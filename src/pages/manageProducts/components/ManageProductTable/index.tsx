@@ -1,7 +1,8 @@
 import React from 'react';
+import SimpleTable from 'components/SimpleTable';
 import { manageProductsColumns as columns } from '../../constants';
 import { Product } from '../../types';
-import SimpleTable from 'components/SimpleTable';
+import ActionsColumn from './components/ActionsColumn';
 
 type ManageProductTableProps = {
   products: Product[];
@@ -19,6 +20,7 @@ export const ManageProductTable = (props: ManageProductTableProps) => {
         lastSync: p.lastSync,
         sku: p.sku,
         description: p.description,
+        actions: <ActionsColumn productId={p.id} />,
       }))}
     />
   );
