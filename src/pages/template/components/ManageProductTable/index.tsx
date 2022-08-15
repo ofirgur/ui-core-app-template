@@ -1,7 +1,7 @@
 import React from 'react';
 import SimpleTable from 'components/SimpleTable';
-import { manageProductsColumns as columns } from '../../constants';
-import { Product } from '../../types';
+import { manageProductsColumns as columns } from '../../utils/constants';
+import { Product } from '../../utils/types';
 import ActionsColumn from './components/ActionsColumn';
 
 type ManageProductTableProps = {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Skeleton from 'components/Skeleton';
-import { getProductsAPI } from '../../api';
-import { useManageProductsContext } from '../../state/context';
+import { getProductsAPI } from '../../utils/api';
+import { useManageProductsContext } from '../../utils/state/context';
 import ManageProductTable from '../ManageProductTable';
 
 const ManageProductsIndex = () => {
@@ -23,7 +23,7 @@ const ManageProductsIndex = () => {
     setProducts();
   }, []);
 
-  if (!ready) return <Skeleton type="table" />;
+  if (!ready) return <Skeleton type="cards" />;
 
   return <ManageProductTable products={products} />;
 };

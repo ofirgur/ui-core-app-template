@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Outlet, Routes, Route } from 'react-router-dom';
-import { MANAGE_PRODUCTS_INITIAL_STATE } from 'pages/manageProducts/state/initial';
-import { ManageProductsContextProvider } from '../../state/context';
+import { MANAGE_PRODUCTS_INITIAL_STATE } from 'pages/manageProducts/utils/state/initial';
+import { ManageProductsContextProvider } from '../../utils/state/context';
 import ManageProductsIndex from '../ManageProductsIndex';
 import ManageProductDetails from '../ManageProductDetails';
 

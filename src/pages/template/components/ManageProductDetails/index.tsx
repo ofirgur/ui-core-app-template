@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Product } from 'pages/manageProducts/types';
-import { useManageProductsContext } from 'pages/manageProducts/state/context';
+import { Product } from 'pages/manageProducts/utils/types';
+import { useManageProductsContext } from 'pages/manageProducts/utils/state/context';
 import { StyledProductTitle } from './styled';
 
 const ManageProductDetails = () => {

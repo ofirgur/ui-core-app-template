@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
-import STRINGS from '../../../../strings';
+import STRINGS from '../../../../utils/strings';
 import { StyledActionsColumn, StyledLink } from './styled';
 
 type ActionsColumnProps = {
