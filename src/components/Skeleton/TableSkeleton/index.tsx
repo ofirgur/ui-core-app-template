@@ -5,10 +5,10 @@ import Skeleton from '@mui/material/Skeleton';
 const TableSkeleton = () => {
   return (
     <Box>
-      <Skeleton animation="wave" height={70} />
-      <Skeleton animation="wave" height={35} />
-      <Skeleton animation="wave" height={35} />
-      <Skeleton animation="wave" height={35} />
+      <Skeleton animation="wave" height={80} />
+      <Skeleton animation="wave" height={60} />
+      <Skeleton animation="wave" height={60} />
+      <Skeleton animation="wave" height={60} />
     </Box>
   );
 };
