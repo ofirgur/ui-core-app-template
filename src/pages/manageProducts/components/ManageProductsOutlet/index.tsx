@@ -1,21 +1,39 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Outlet, Routes, Route } from 'react-router-dom';
-import { MANAGE_PRODUCTS_INITIAL_STATE } from 'pages/manageProducts/utils/state/initial';
-import { ManageProductsContextProvider } from '../../utils/state/context';
+import Skeleton from 'components/Skeleton';
+import { getProductsAPI } from '../../utils/api';
+import { useManageProductsContext } from '../../utils/state/context';
 import ManageProductsIndex from '../ManageProductsIndex';
 import ManageProductDetails from '../ManageProductDetails';
 
 const ManageProductsOutlet = () => {
+  const [ready, setReady] = useState(false);
+  const { setManageProductsState } = useManageProductsContext();
+
+  useEffect(() => {
+    const setProducts = () => {
+      getProductsAPI().then((response) => {
+        setManageProductsState({
+          products: response.data,
+        });
+        setReady(true);
+      });
+    };
+
+    setProducts();
+  }, []);
+
+  if (!ready) return <Skeleton type="table" />;
+
   return (
-    <ManageProductsContextProvider initialState={MANAGE_PRODUCTS_INITIAL_STATE}>
-      <React.Fragment>
-        <Outlet />
-        <Routes>
-          <Route index element={<ManageProductsIndex />} />
-          <Route path=":productId" element={<ManageProductDetails />} />
-        </Routes>
-      </React.Fragment>
-    </ManageProductsContextProvider>
+    <React.Fragment>
+      <Routes>
+        <Route index element={<ManageProductsIndex />} />
+        <Route path=":productId" element={<ManageProductDetails />} />
+      </Routes>
+
+      <Outlet />
+    </React.Fragment>
   );
 };
 

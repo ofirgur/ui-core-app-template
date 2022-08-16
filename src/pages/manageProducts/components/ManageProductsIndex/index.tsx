@@ -1,29 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import Skeleton from 'components/Skeleton';
-import { getProductsAPI } from '../../utils/api';
+import React from 'react';
 import { useManageProductsContext } from '../../utils/state/context';
 import ManageProductTable from '../ManageProductTable';
 
 const ManageProductsIndex = () => {
-  const [ready, setReady] = useState(false);
-  const { manageProductsState, setManageProductsState } =
-    useManageProductsContext();
+  const { manageProductsState } = useManageProductsContext();
   const { products } = manageProductsState;
-
-  useEffect(() => {
-    const setProducts = () => {
-      getProductsAPI().then((response) => {
-        setManageProductsState({
-          products: response.data,
-        });
-        setReady(true);
-      });
-    };
-
-    setProducts();
-  }, []);
-
-  if (!ready) return <Skeleton type="table" />;
 
   return <ManageProductTable products={products} />;
 };
