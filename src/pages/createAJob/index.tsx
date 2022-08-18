@@ -1,16 +1,14 @@
-import React, { useEffect } from 'react';
-import { createAPIAction } from 'utils/api';
+import React from 'react';
+import { MANAGE_PRODUCTS_INITIAL_STATE } from 'pages/manageProducts/utils/state/initial';
+import { ManageProductsContextProvider } from './utils/state/context';
+import ManageProductsOutlet from './components/ManageProductsOutlet';
 
-const CreateAJob = () => {
-  useEffect(() => {
-    createAPIAction({
-      url: 'users',
-    }).then((response) => {
-      console.log(response);
-    });
-  }, []);
-
-  return <div>CreateAJob</div>;
+const ManageProducts = () => {
+  return (
+    <ManageProductsContextProvider initialState={MANAGE_PRODUCTS_INITIAL_STATE}>
+      <ManageProductsOutlet />
+    </ManageProductsContextProvider>
+  );
 };
 
-export default CreateAJob;
+export default ManageProducts;

@@ -1,7 +1,14 @@
 import React from 'react';
+import { MANAGE_PRODUCTS_INITIAL_STATE } from 'pages/manageProducts/utils/state/initial';
+import { ManageProductsContextProvider } from './utils/state/context';
+import ManageProductsOutlet from './components/ManageProductsOutlet';
 
-const Status = () => {
-  return <div>Status</div>;
+const ManageProducts = () => {
+  return (
+    <ManageProductsContextProvider initialState={MANAGE_PRODUCTS_INITIAL_STATE}>
+      <ManageProductsOutlet />
+    </ManageProductsContextProvider>
+  );
 };
 
-export default Status;
+export default ManageProducts;
