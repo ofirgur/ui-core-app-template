@@ -1,8 +1,8 @@
-export interface ManageProductsContextInterface {
-    manageProductsState: ManageProductsState;
-    setManageProductsState: (state: Partial<ManageProductsState>) => void;
+export interface ManageGarmentsContextInterface {
+    manageGarmentsState: ManageGarmentsState;
+    setManageGarmentsState: (state: Partial<ManageGarmentsState>) => void;
   }
   
-  export interface ManageProductsState {
+  export interface ManageGarmentsState {
     products: any;
   }

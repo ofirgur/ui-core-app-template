@@ -1,13 +1,13 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Product } from 'pages/manageProducts/utils/types';
-import { useManageProductsContext } from 'pages/manageProducts/utils/state/context';
+import { Product } from '../../utils/types';
+import { useManageGarmentsContext } from '../../utils/state/context';
 import { StyledProductTitle } from './styled';
 
-const ManageProductDetails = () => {
+const ManageGarmentDetails = () => {
   const { productId } = useParams();
-  const { manageProductsState } = useManageProductsContext();
-  const { products } = manageProductsState;
+  const { manageGarmentsState } = useManageGarmentsContext();
+  const { products } = manageGarmentsState;
   const product = products.find((p: Product) => p.id === productId);
 
   return (
@@ -17,4 +17,4 @@ const ManageProductDetails = () => {
   );
 };
 
-export default ManageProductDetails;
+export default ManageGarmentDetails;

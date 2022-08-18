@@ -5,7 +5,7 @@ import Skeleton from '@mui/material/Skeleton';
 export const CardsSkeleton = () => {
   return (
     <Box display="inline-flex" gap="20px">
-      {[1, 2, 3].map((b, i) => (
+      {[1, 2, 3, 4].map((b, i) => (
         <Box key={i} width="280px">
           <Skeleton variant="rectangular" height={118} />
           <Box>

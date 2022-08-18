@@ -2,18 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { Outlet, Routes, Route } from 'react-router-dom';
 import Skeleton from 'components/Skeleton';
 import { getProductsAPI } from '../../utils/api';
-import { useManageProductsContext } from '../../utils/state/context';
-import ManageProductsIndex from '../ManageProductsIndex';
-import ManageProductDetails from '../ManageProductDetails';
+import { useManageGarmentsContext } from '../../utils/state/context';
+import ManageGarmentsIndex from '../ManageGarmentsIndex';
+import ManageGarmentsDetails from '../ManageGarmentDetails';
 
-const ManageProductsOutlet = () => {
+const ManageGarmentsOutlet = () => {
   const [ready, setReady] = useState(false);
-  const { setManageProductsState } = useManageProductsContext();
+  const { setManageGarmentsState } = useManageGarmentsContext();
 
   useEffect(() => {
     const setProducts = () => {
       getProductsAPI().then((response) => {
-        setManageProductsState({
+        setManageGarmentsState({
           products: response.data,
         });
         setReady(true);
@@ -23,13 +23,13 @@ const ManageProductsOutlet = () => {
     setProducts();
   }, []);
 
-  if (!ready) return <Skeleton type="table" />;
+  if (!ready) return <Skeleton type="cards" />;
 
   return (
     <React.Fragment>
       <Routes>
-        <Route index element={<ManageProductsIndex />} />
-        <Route path=":productId" element={<ManageProductDetails />} />
+        <Route index element={<ManageGarmentsIndex />} />
+        <Route path=":productId" element={<ManageGarmentsDetails />} />
       </Routes>
 
       <Outlet />
@@ -37,4 +37,4 @@ const ManageProductsOutlet = () => {
   );
 };
 
-export default ManageProductsOutlet;
+export default ManageGarmentsOutlet;

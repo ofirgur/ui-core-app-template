@@ -6,9 +6,9 @@ const TableSkeleton = () => {
   return (
     <Box>
       <Skeleton animation="wave" height={70} />
-      <Skeleton animation="wave" height={50} />
-      <Skeleton animation="wave" height={50} />
-      <Skeleton animation="wave" height={50} />
+      <Skeleton animation="wave" height={35} />
+      <Skeleton animation="wave" height={35} />
+      <Skeleton animation="wave" height={35} />
     </Box>
   );
 };

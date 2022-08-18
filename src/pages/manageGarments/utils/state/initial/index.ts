@@ -1,3 +1,3 @@
-export const MANAGE_PRODUCTS_INITIAL_STATE = {
-    products: [],
+export const MANAGE_GARMENTS_INITIAL_STATE = {
+  products: [],
 };
