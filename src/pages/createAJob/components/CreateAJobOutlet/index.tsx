@@ -23,7 +23,7 @@ const CreateAJobOutlet = () => {
     setProducts();
   }, []);
 
-  if (!ready) return <Skeleton type="table" />;
+  if (!ready) return <Skeleton type="cards" />;
 
   return (
     <React.Fragment>
