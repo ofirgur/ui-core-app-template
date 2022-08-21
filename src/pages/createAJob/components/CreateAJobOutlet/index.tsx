@@ -2,18 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { Outlet, Routes, Route } from 'react-router-dom';
 import Skeleton from 'components/Skeleton';
 import { getProductsAPI } from '../../utils/api';
-import { useManageProductsContext } from '../../utils/state/context';
-import ManageProductsIndex from '../ManageProductsIndex';
-import ManageProductDetails from '../ManageProductDetails';
+import { useCreateAJobContext } from '../../utils/state/context';
+import ManageProductsIndex from '../CreateAJobIndex';
+import ManageProductDetails from '../CreateAJobDetails';
 
 const CreateAJobOutlet = () => {
   const [ready, setReady] = useState(false);
-  const { setManageProductsState } = useManageProductsContext();
+  const { setCreateAJobState } = useCreateAJobContext();
 
   useEffect(() => {
     const setProducts = () => {
       getProductsAPI().then((response) => {
-        setManageProductsState({
+        setCreateAJobState({
           products: response.data,
         });
         setReady(true);

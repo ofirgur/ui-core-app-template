@@ -4,10 +4,10 @@ import STRINGS from '../strings';
 export const productPath = ':productId';
 
 export const getProductPath = (productId: string) => {
-    return `${routes.manageproducts.path}/${productId}`;
+    return `${routes.createajob.path}/${productId}`;
 };
 
-export const manageProductsColumns = [
+export const createAJobColumns = [
   STRINGS.ProductName,
   STRINGS.Sizes,
   STRINGS.LastRun,
