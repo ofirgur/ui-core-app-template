@@ -6,7 +6,7 @@ import { useManageProductsContext } from '../../utils/state/context';
 import ManageProductsIndex from '../ManageProductsIndex';
 import ManageProductDetails from '../ManageProductDetails';
 
-const ManageProductsOutlet = () => {
+const CreateAJobOutlet = () => {
   const [ready, setReady] = useState(false);
   const { setManageProductsState } = useManageProductsContext();
 
@@ -37,4 +37,4 @@ const ManageProductsOutlet = () => {
   );
 };
 
-export default ManageProductsOutlet;
+export default CreateAJobOutlet;

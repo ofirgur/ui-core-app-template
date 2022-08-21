@@ -1,17 +1,17 @@
 import React from 'react';
-import { ManageProductsContextInterface, ManageProductsState } from '../types';
+import { CreateAJobContextInterface, CreateAJobState } from '../types';
 
 // state management context
-const ManageProductsContext =
-  React.createContext<ManageProductsContextInterface | null>(null);
+const CreateAJobContext =
+  React.createContext<CreateAJobContextInterface | null>(null);
 
 // custome hook to get the state of the app, getter & setter,
 // return { gameState, setGameState }, see Ln 32, Col 38
-export const useManageProductsContext = () => {
-  const context = React.useContext(ManageProductsContext);
+export const useCreateAJobContext = () => {
+  const context = React.useContext(CreateAJobContext);
   if (!context) {
     throw new Error(
-      'useManageProductsContext must be used within a ManageProductsContextProvider'
+      'useCreateAJobContext must be used within a CreateAJobContextProvider'
     );
   }
 
@@ -20,32 +20,32 @@ export const useManageProductsContext = () => {
 
 // context frovider for app state, should wrap the Root of the app
 // it's a component with local state,
-// it shares it's state (getter & setter) with the returned ManageProductsContext.Provider (context provider)
-type ManageProductsContextProviderProps = {
+// it shares it's state (getter & setter) with the returned CreateAJobContext.Provider (context provider)
+type CreateAJobContextProviderProps = {
   children: JSX.Element;
-  initialState: ManageProductsState;
+  initialState: CreateAJobState;
 };
 
-export const ManageProductsContextProvider = (
-  props: ManageProductsContextProviderProps
+export const CreateAJobContextProvider = (
+  props: CreateAJobContextProviderProps
 ) => {
   const { children, initialState } = props;
-  const [manageProductsState, regularSetManageProductsState] =
+  const [createAJobState, regularSetCreateAJobState] =
     React.useState(initialState);
-  const setManageProductsState = (newState: Partial<ManageProductsState>) => {
-    regularSetManageProductsState((prevState: ManageProductsState) => ({
+  const setCreateAJobState = (newState: Partial<CreateAJobState>) => {
+    regularSetCreateAJobState((prevState: CreateAJobState) => ({
       ...prevState,
       ...newState,
     }));
   };
 
   const value = React.useMemo(
-    () => ({ manageProductsState, setManageProductsState }),
-    [manageProductsState]
+    () => ({ createAJobState, setCreateAJobState }),
+    [createAJobState]
   );
   return (
-    <ManageProductsContext.Provider value={value} {...props}>
+    <CreateAJobContext.Provider value={value} {...props}>
       {children}
-    </ManageProductsContext.Provider>
+    </CreateAJobContext.Provider>
   );
 };

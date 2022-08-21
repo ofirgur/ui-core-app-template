@@ -1,8 +1,8 @@
-export interface ManageProductsContextInterface {
-    manageProductsState: ManageProductsState;
-    setManageProductsState: (state: Partial<ManageProductsState>) => void;
-  }
+export interface CreateAJobContextInterface {
+  createAJobState: CreateAJobState;
+  setCreateAJobState: (state: Partial<CreateAJobState>) => void;
+}
   
-  export interface ManageProductsState {
-    products: any;
-  }
+export interface CreateAJobState {
+  products: any;
+}
