@@ -1,14 +1,14 @@
 import React from 'react';
-import { MANAGE_PRODUCTS_INITIAL_STATE } from 'pages/manageProducts/utils/state/initial';
+import { CREATE_A_JOB_INITIAL_STATE } from './utils/state/initial';
 import { ManageProductsContextProvider } from './utils/state/context';
 import ManageProductsOutlet from './components/ManageProductsOutlet';
 
-const ManageProducts = () => {
+const CreateAJob = () => {
   return (
-    <ManageProductsContextProvider initialState={MANAGE_PRODUCTS_INITIAL_STATE}>
+    <ManageProductsContextProvider initialState={CREATE_A_JOB_INITIAL_STATE}>
       <ManageProductsOutlet />
     </ManageProductsContextProvider>
   );
 };
 
-export default ManageProducts;
+export default CreateAJob;

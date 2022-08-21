@@ -1,3 +1,3 @@
-export const MANAGE_PRODUCTS_INITIAL_STATE = {
+export const CREATE_A_JOB_INITIAL_STATE = {
     products: [],
 };
